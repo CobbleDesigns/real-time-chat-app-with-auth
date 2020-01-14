@@ -1,0 +1,45 @@
+<h1 class="mt-4">WhatsApp</h1>
+<p class="lead mb-3">Welcome <%= name %></p>
+
+<style>
+    
+    #message-container {
+      width: 80%;
+      max-width: 1200px;
+    }
+
+    #message-container div {
+      background-color: #CCC;
+      padding: 5px;
+    }
+
+    #message-container div:nth-child(2n) {
+      background-color: #FFF;
+    }
+
+    #send-container {
+      position: fixed;
+      padding-bottom: 30px;
+      bottom: 0;
+      background-color: white;
+      max-width: 1200px;
+      width: 80%;
+      display: flex;
+    }
+
+    #message-input {
+      flex-grow: 1;
+    }
+  </style>
+<div id="message-container">
+    <form method="GET" id="send-container">
+        <input type="text" id="message-input">
+        <button type="submit" class="btn btn-primary" id="send-button">send</button>
+       
+    </form> 
+
+</div> 
+<a href="/users/logout" class="btn btn-secondary">Logout</a>
+
+<script src="http://localhost:8080/socket.io/socket.io.js"></script>
+<script src="/script.js"></script>
